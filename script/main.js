@@ -10,7 +10,21 @@ $(document).ready(function () {
     var dropMenu = dropDown.children('.dropdown-menu');
 
 
+    var arrowChange = $('.right-nav ul li:nth-child(6) a'); //select a link
+    var iconChange = $('.right-nav ul li:nth-child(6) a i'); //select icon change
 
+
+    // icon change
+
+    arrowChange.mouseenter(function () { 
+        iconChange.removeClass('fas fa-chevron-down')
+        iconChange.addClass('fas fa-chevron-up')
+    });
+
+    arrowChange.mouseleave(function () { 
+        iconChange.removeClass('fas fa-chevron-up')
+        iconChange.addClass('fas fa-chevron-down')
+    });
 
     //mouse click
     dropLink.click(function () { 
