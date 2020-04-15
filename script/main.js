@@ -13,8 +13,6 @@ $(document).ready(function () {
     var iconChange = $('.right-nav ul li:nth-child(6) a i'); //select icon change
 
 
- 
-
     //mouse click
     dropLink.click(function () { 
 
@@ -39,27 +37,18 @@ $(document).ready(function () {
     });
 
 
-    // // alternative mouse enter / mouse leave 
+    // alternative mouse enter / mouse leave 
 
-    // dropLink.mouseenter(function () { 
+    dropDown.mouseenter(function () { 
 
-    //     var actualMenu = $(this).next('.dropdown-menu');
+        $(this).children('.dropdown-menu').show();
+       
+    });
 
-    //     dropMenu.not(actualMenu).hide();
+    dropDown.mouseleave(function () { 
 
-    //     actualMenu.toggle();
-
-    // });
-
-    // dropLink.mouseleave(function () { 
-
-    //     var actualMenu = $(this).next('.dropdown-menu');
-
-    //     dropMenu.not(actualMenu).hide();
-
-    //     actualMenu.toggle();
-
-    // });
+        $(this).children('.dropdown-menu').hide();
+    });
 
     
 }); //end document ready
